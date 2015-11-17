@@ -10,7 +10,7 @@ var GuestService = {
 			data: JSON.stringify(guest),
 			success: function(addedGuest) {
 				console.log('Guest created!');
-				callback(addedGuest);
+				callback(JSON.parse(addedGuest));
 			},
 			error: function() {
 				console.log('Error to add guest ' + guest.name);
